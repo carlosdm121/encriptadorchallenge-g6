@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Encriptador y Desencriptador de texto" />
+    <meta
+      name="keywords"
+      content="encriptador, desencriptador, texto, cifrado, descifrado"
+    />
+    <meta name="author" content="Daniel Martinez" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Encrypter and Decrypter</title>
+  </head>
+
+  <body>
+    <header>
+      <img src="assest/images/Logo_Alura.png" alt="Logo" />
+      <h1>Encrypter and Decrypter</h1>
+    </header>
+    <!-- start of main section -->
+    <section>
+      <!-- start of left-side article -->
+      <article class="leftArticle">
+        <textarea
+          name="input"
+          id="inputText"
+          cols="30"
+          rows="10"
+          placeholder="Enter here your text to encrypt..."
+        ></textarea>
+        <div class="bottomContainer">
+          <p>
+            &#9888; Only lowercase letters and without accents are accepted..
+          </p>
+          <div class="btnContainer">
+            <button
+              type="button"
+              value="Encrypt"
+              id="encrypt"
+              onclick="encrypter()"
+              class="btn"
+            >
+              Encriptar
+            </button>
+            <button
+              type="button"
+              value="Decrypt"
+              id="decrypt"
+              onclick="decrypter()"
+              class="btn"
+            >
+              Decrypt
+            </button>
+          </div>
+        </div>
+      </article>
+      <!-- end of left-side article -->
+
+      <!-- start of right-side article -->
+      <article class="rightArticle">
+        <textarea
+          name="outputText"
+          id="outputText"
+          cols="30"
+          rows="10"
+          readonly
+          class="textNotFound"
+        >
+        No message was found</textarea
+        >
+        <button
+          type="button"
+          id="copyToClipboard"
+          onclick="copyToClipboard()"
+          class="btn"
+        >
+          Copy Text
+        </button>
+      </article>
+      <!-- end of right-side article -->
+    </section>
+    <!-- end of main section -->
+
+    <footer class="pie-pagina">
+      <div class="grupo-1">
+        <div class="box">
+          <figure>
+            <a href="#">
+              <img
+                src="https://i.ibb.co/WshHnvb/Sin-t-tulo-3.jpg"
+                alt="Logo de Daniel"
+              />
+            </a>
+          </figure>
+        </div>
+        <div class="box">
+          <h2>CREATED BY DANIEL MARTINEZ</h2>
+          <p>Principiante en Programación G6 - ONE</p>
+          <p>Challenge ONE</p>
+          <p>OracleOne - Alura Latam</p>
+          <p>Learning in progress</p>
+        </div>
+        <div class="box">
+          <h2>FOLLOW ME</h2>
+          <div class="red-social">
+            <a
+              href="https://www.facebook.com/cardanielmartinez"
+              class="fa fa-facebook"
+              rel="noopener"
+              target="_blank"
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/carlos-daniel-martinez121/"
+              class="fa fa-linkedin"
+              rel="noopener"
+              target="_blank"
+            ></a>
+            <a
+              href="mailto:carlosdmartinez121@gmail.com"
+              class="fa fa-google"
+              rel="noopener"
+              target="_blank"
+            ></a>
+            <a
+              href="https://github.com/carlosdm121"
+              class="fa fa-github"
+              rel="noopener"
+              target="_blank"
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="grupo-2">
+        <small
+          >&copy, 2024 <b>Tucumán - Argentina</b> - All Rights Reserved</small
+        >
+      </div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/8d388ff8e0.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

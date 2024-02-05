@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #0a1a2a; /* Color de fondo */
+  --text-color: #798794; /* Color del texto */
+  --dark: #333; /* Color oscuro para el texto */
+}
+
+/* Body Styles */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+
+header {
+  background-color: #0a1a2a;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+}
+
+header img {
+  max-width: 100px;
+  height: auto;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+header h1 {
+  color: #fff;
+  margin: 0;
+  font-size: 1.5em;
+}
+
+/* Main Section Styles */
+
+section {
+  display: flex;
+  flex: 1;
+  margin: 5vh 15px 0 15px;
+  flex-direction: row;
+}
+
+/* Left Article Styles */
+
+.leftArticle {
+  height: 70vh;
+  width: 75vw;
+}
+
+.leftArticle textarea {
+  width: 90%;
+  height: 74%;
+  text-align: justify;
+  padding: 2%;
+  font-size: 2rem;
+  background-color: #0a1a2a;
+  border-radius: 10px;
+  border-style: none;
+  color: #efefef;
+  resize: none;
+}
+
+.leftArticle textarea:focus {
+  outline-style: none;
+}
+
+.bottomContainer {
+  height: 20%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.leftArticle p {
+  margin-bottom: 6vh;
+  color: #7f8080;
+}
+
+.leftArticle button {
+  border-radius: 10px;
+  color: #efefef;
+}
+
+/* Button Styles */
+
+.btnContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn {
+  font-size: 1.5rem;
+  background-color: var(--background-color);
+  border: 10px solid var(--background-color);
+}
+
+/* Right Article Styles */
+
+.rightArticle {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  width: 25vw;
+}
+
+.rightArticle textarea {
+  height: 80%;
+  font-size: 1rem;
+  padding: 2vw;
+  border: none;
+  background-color: var(--background-color);
+  border-radius: 10px;
+  color: #efefef;
+  resize: none;
+  margin-bottom: 10px;
+}
+
+.rightArticle textarea:focus {
+  outline-style: none;
+}
+
+.textNotFound {
+  background-image: url(/assest/images/background-image-textarea.png);
+  background-repeat: no-repeat;
+  background-position-y: 70%;
+  background-position-x: center;
+}
+
+.textFound {
+  background-color: var(--background-color);
+}
+
+.rightArticle button {
+  height: auto;
+  border-radius: 10px;
+  color: #efefef;
+}
+
+
+/* Footer Styles */
+
+.pie-pagina {
+  width: 100%;
+  background-color: #0a141d;
+}
+
+.pie-pagina .grupo-1 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img {
+  width: 150px;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p {
+  color: #efefef;
+  margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  margin-right: 10px;
+  background-color: #313c47;
+  text-align: center;
+  transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover {
+  color: aqua;
+}
+
+.pie-pagina .grupo-2 {
+  background-color: #0a1a2a;
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.pie-pagina .grupo-2 small {
+  font-size: 15px;
+}
+
+/* Estilos para pantallas grandes (mayores a 768px) */
+@media only screen and (max-width: 600px) {
+  header img {
+    max-width: 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .rightArticle {
+    width: 90%; /* Cambiar el ancho al 90% en pantallas más pequeñas */
+    max-width: none; /* Eliminar el ancho máximo */
+  }
+}
+
+/* Estilos para pantallas medianas (entre 481px y 768px) */
+
+@media (min-width: 481px) and (max-width: 768px) {
+  section {
+    flex-direction: column;
+  }
+
+  .leftArticle,
+  .rightArticle {
+    width: 100%;
+  }
+}
+
+/* Estilos para pantallas pequeñas (hasta 480px) */
+
+@media (max-width: 480px) {
+  section {
+    flex-direction: column;
+  }
+
+  .leftArticle,
+  .rightArticle {
+    width: 100%;
+  }
+
+  .leftArticle textarea,
+  .rightArticle textarea {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .pie-pagina .grupo-1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+  }
+}
